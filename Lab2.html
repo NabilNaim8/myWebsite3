@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student's Profile</title>
+</head>
+<body>
+
+    <!-- SEMANTIC TAG 1: <header> -->
+    <!-- The top part of the page: usually the title -->
+    <header>
+        <h1>Welcome to Student's Profile Page</h1>
+    </header>
+
+    <!-- SEMANTIC TAG 2: <nav> -->
+    <!-- Navigation links. href="#id" jumps to the element with that id -->
+    <nav>
+        <a href="#info">Student Info</a> |
+        <a href="#register">Registration Form</a>
+    </nav>
+
+    <!-- SEMANTIC TAG 3: <section> -->
+    <!-- A section groups content on one theme. This one holds the TABLE -->
+    <section id="info">
+
+        <!-- SEMANTIC TAG 4: <article> -->
+        <!-- A self-contained piece of content -->
+       
+            <h2>Student Information</h2> 
+            <article>
+            <p>This table shows some details about Student in Collage Ungku Deramat.</p>
+
+            <!-- TASK 1: TABLE (at least 3 rows and 3 columns) -->
+            <!-- border="1" draws lines around the cells -->
+            <table border="1">
+                <!-- Row 1: header row. <th> = table header cell -->
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Course</th>
+                    <th>Club</th>
+                </tr>
+                <!-- Row 2: <td> = normal data cell -->
+                <tr>
+                    <td>Ungku Abbas</td>
+                    <td>20</td>
+                    <td>Male</td>
+                    <td>softwear Engineering</td>
+                    <td>Badminton</td>
+                </tr>
+                <!-- Row 3 -->
+                <tr>
+                    <td>Wan nurul Aminah</td>
+                    <td>21</td>
+                    <td>Female</td>
+                    <td>Economy</td>
+                    <td>Theater</td>
+                </tr>
+                <!-- Row 4 -->
+                <tr>
+                    <td>John Doe</td>
+                    <td>22</td>
+                    <td>Male</td>
+                    <td>Law</td>
+                    <td>Debate</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- A second section for the FORM -->
+    <section id="register">
+        
+            <h2>Registration Form</h2>
+            <article>
+            <!-- TASK 2: FORM -->
+            <!-- action = where data is sent, method="post" = how it is sent -->
+            <form action="submit_form.php" method="post">
+
+                <!-- Text input: name -->
+                <label for="fullname">Name:</label><br>
+                <input type="text" id="fullname" name="fullname"><br><br>
+
+                <!-- Text input: Age (type="Age" checks the format) -->
+                <label for="Age">Age:</label><br>
+                <input type="text" id="Age" name="Age"><br><br>
+
+                <!-- Radio buttons: gender (same name="gender" so only ONE can be chosen) -->
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br><br>
+
+                <!-- Text input: Course -->
+                <label for="Coursename">Course Name:</label><br>
+                <input type="text" id="Coursename" name="Coursename"><br><br>
+
+                <!-- Checkboxes: Club (user can tick MANY) -->
+                <label>Favorite Club:</label><br>
+                <input type="checkbox" id="Club1" name="Club1" value="Badminton">
+                <label for="Club1">Badminton</label><br>
+                <input type="checkbox" id="Club2" name="Club2" value="Debate">
+                <label for="Club2">Debate</label><br>
+                <input type="checkbox" id="Club3" name="Club3" value="Theater">
+                <label for="Club3">Theater</label><br>
+                <input type="checkbox" id="Club4" name="Club4" value="Diving">
+                <label for="Club4">Diving</label><br><br>
+
+                <!-- Submit button -->
+                <input type="submit" value="Submit">
+            </form>
+        </article>
+    </section>
+
+    <!-- SEMANTIC TAG 5: <footer> -->
+    <!-- The bottom of the page: copyright, contact, etc. -->
+    <footer>
+        <p>Copyright &copy; 2026 Student Web Page</p>
+    </footer>
+
+</body>
+</html>

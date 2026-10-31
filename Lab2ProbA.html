@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Programming Workshop 2026</title>
+</head>
+<body>
+
+    <!-- HEADER: event name and tagline -->
+    <header>
+        <h1>Programming Workshop 2026</h1>
+        <p>Learn to code, build something, and meet fellow students.</p>
+    </header>
+
+    <!-- NAV: internal links. Each href matches the id of a section below -->
+    <nav>
+        <a href="#about">About</a> |
+        <a href="#schedule">Schedule</a> |
+        <a href="#register">Register</a>
+    </nav>
+
+    <!-- SECTION 1: About the Event (contains two articles) -->
+    <section id="about">
+        <h2>About the Event</h2>
+
+        <!-- ARTICLE 1: one speaker -->
+        <article>
+            <h3>Speaker: Dr. Aisyah</h3>
+            <p>Dr. Aisyah will introduce the basics of web development and show how a web page is built.</p>
+        </article>
+
+        <!-- ARTICLE 2: one activity -->
+        <article>
+            <h3>Activity: Mini Project Challenge</h3>
+            <p>Teams will build a small web page in the afternoon and present it to a panel.</p>
+        </article>
+    </section>
+
+    <!-- SECTION 2: Event Schedule (table with 4 columns) -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+
+        <table border="1">
+            <!-- Header row -->
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+                <th>Venue</th>
+                <th>Person in Charge</th>
+            </tr>
+
+            <!-- Row 1 -->
+            <tr>
+                <td>08:30 - 09:00</td>
+                <td>Registration and Welcome</td>
+                <td>Main Lobby</td>
+                <td>Organising Committee</td>
+            </tr>
+
+            <!-- Rows 2 and 3: ROWSPAN. Venue "Lab 1" is written once and spans 2 rows -->
+            <tr>
+                <td>09:00 - 10:30</td>
+                <td>Introduction to Web Development</td>
+                <td rowspan="2">Lab 1</td>
+                <td>Dr. Aisyah</td>
+            </tr>
+            <tr>
+                <td>10:30 - 12:00</td>
+                <td>Building a Page with HTML</td>
+                <!-- No Venue cell here: the rowspan above already covers it -->
+                <td>Mr. Hafiz</td>
+            </tr>
+
+            <!-- Row 4: COLSPAN. One cell spans Activity, Venue and Person in Charge -->
+            <tr>
+                <td>12:00 - 13:00</td>
+                <td colspan="3">Lunch Break</td>
+            </tr>
+
+            <!-- Row 5 -->
+            <tr>
+                <td>13:00 - 15:00</td>
+                <td>Mini Project Challenge</td>
+                <td>Lab 2</td>
+                <td>Ms. Nurul</td>
+            </tr>
+
+            <!-- Row 6 -->
+            <tr>
+                <td>15:00 - 16:00</td>
+                <td>Project Presentations</td>
+                <td>Seminar Room</td>
+                <td>Panel of Lecturers</td>
+            </tr>
+
+            <!-- Row 7 -->
+            <tr>
+                <td>16:00 - 16:30</td>
+                <td>Prize Giving and Closing</td>
+                <td>Main Hall</td>
+                <td>Dean of the Faculty</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- SECTION 3: Registration form -->
+    <section id="register">
+        <h2>Registration</h2>
+
+        <form action="register.html" method="post">
+
+            <!-- Text inputs: label "for" must match input "id" -->
+            <p>
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname">
+            </p>
+            <p>
+                <label for="matric">Matric Number:</label><br>
+                <input type="text" id="matric" name="matric">
+            </p>
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email">
+            </p>
+
+            <!-- Radio buttons: all share name="year", so only one can be chosen -->
+            
+                <label>Year of Study</label><br>
+                <input type="radio" id="year1" name="year" value="1">
+                <label for="year1">Year 1</label>
+                <input type="radio" id="year2" name="year" value="2">
+                <label for="year2">Year 2</label>
+                <input type="radio" id="year3" name="year" value="3">
+                <label for="year3">Year 3</label>
+                <input type="radio" id="year4" name="year" value="4">
+                <label for="year4">Year 4</label>
+                <br><br>
+            
+
+            <!-- Checkboxes: the student can tick many -->
+        
+                <label>Sessions You Want to Join</label><br>
+                <input type="checkbox" id="s1" name="session1" value="intro">
+                <label for="s1">Introduction to Web Development</label><br>
+                <input type="checkbox" id="s2" name="session2" value="html">
+                <label for="s2">Building a Page with HTML</label><br>
+                <input type="checkbox" id="s3" name="session3" value="project">
+                <label for="s3">Mini Project Challenge</label>
+
+            <!-- Drop-down list with 4 options -->
+            <p>
+                <label for="programme">Programme:</label><br>
+                <select id="programme" name="programme">
+                    <option value="cs">Computer Science</option>
+                    <option value="se">Software Engineering</option>
+                    <option value="math">Mathematics</option>
+                    <option value="data">Data Science</option>
+                </select>
+            </p>
+
+            <!-- Submit button -->
+            <p>
+                <input type="submit" value="Register">
+            </p>
+        </form>
+    </section>
+
+    <!-- FOOTER: organiser and copyright -->
+    <footer>
+        <p>Organised by the Faculty of Computer Science and Mathematics</p>
+        <p>Copyright &copy; 2026 Programming Workshop</p>
+    </footer>
+
+</body>
+</html>
